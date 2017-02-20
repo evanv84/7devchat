@@ -1,0 +1,29 @@
+{
+  "name": "7devchat.com",
+  "version": "1.0.0",
+  "description": "\"# 7devchat\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanv84/7devchat.git"
+  },
+  "author": "krem.design",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.17.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/evanv84/7devchat/issues"
+  },
+  "homepage": "https://github.com/evanv84/7devchat#readme"
+}

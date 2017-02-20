@@ -1,0 +1,17 @@
+{
+  "name": "7devchat.com",
+  "homepage": "krem.design",
+  "authors": [
+    "krem.design"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

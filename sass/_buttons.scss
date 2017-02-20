@@ -1,0 +1,54 @@
+@import "variables";
+@import "mixins";
+
+.btn {
+	display: inline-block;
+	padding: 12px 26px 0 76px;
+	background: transparent;
+	color: $black;
+	border: 1px solid $black;
+	font-size: 1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: relative;
+	height: 50px;
+	@include transition(0.7s);
+	&:before {
+		content: '';
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		top: 0;
+		left: 0;
+		border-right: 1px solid $black;
+		background: url(../img/cart-icon.svg) center center no-repeat;
+		background-position: 100% 50%;
+		@include background-size(60%);
+		@include transition(0.7s);
+		@include breakpoint($tablet) {
+			display: none;
+		}
+	}
+	&:hover {
+			background: #d53023;
+			@include transition(0.5s);
+			background-color: darken($pink, 10);
+			&:before {
+				background-position: 0 50%;
+			}
+	}
+	@include breakpoint($tablet) {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 1em;
+			padding: 0.5em;
+	}
+	@include breakpoint($phone) {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 1em;
+				padding: 0.5em;
+				margin-right: auto;
+				margin-left: auto;
+	}
+}
