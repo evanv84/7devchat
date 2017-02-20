@@ -74,6 +74,39 @@ section {
 	}
 }
 
+header#top {
+	padding-top: 80px;
+	.container {
+		.col-1 {
+			@include span(7 first);
+			
+			.product-1 {
+				background: url(../img/header-product-1.jpg) center center no-repeat;
+				height: 80vh;
+				@include background-size(cover);
+				position: relative;
+			}
+		}
 
+		.col-2 {
+			@include span(5 last);
+			padding-left: 5vh;
+			.product-2 {
+				background: url(../img/header-product-2.jpg) center center no-repeat;
+				height: 37.5vh;
+				margin-bottom: 5vh;
+				@include background-size(cover);
+				position: relative;
+			}
+
+			.product-3 {
+				background: url(../img/header-product-3.jpg) center center no-repeat;
+				height: 37.5vh;
+				@include background-size(cover);
+				position: relative;
+			}
+		}
+	}
+}
 
 //FOOTER AREA ////////////////////////////////////////

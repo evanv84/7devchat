@@ -16,10 +16,47 @@ $susy: (
 nav {
 	width: 100%;
 	height: auto;
-	position: fixed;
+	position: static;
 	background-color: transparentize($white, 1);
 	z-index: 500;
 	top: 0;
+	
+	.brand {
+		position: fixed;
+		z-index: 100;
+		padding: 1rem;
+	}
+
+	.account {
+		position: fixed;
+		z-index: 101;
+		right: 7%;
+		top: 46px;
+	}
+
+	.cart {
+		position: fixed;
+		z-index: 101;
+		right: 3%;
+		top: 49px;
+	}
+
+	.extra-nav {
+		position: fixed;
+		bottom: 40px;
+		right: 3%;
+		z-index: 100;
+		svg {
+			@include transition(0.8s);
+		}
+		
+		&:hover {
+			svg {
+				@include transform(rotate(180deg));
+				@include transition(0.8s);
+			}
+		}
+	}
 	
 	.main-nav {
 		height: auto;
@@ -31,45 +68,24 @@ nav {
 			@include breakpoint($tablet) {
 				@include container(100%)
 			}
-			border-bottom: 1px solid #fff;
-			.brand {
-				@include span(4 first);
-				@include breakpoint($tablet) {
-					@include span(8 first);
-				}
-				
-				img {
-					width: 260px;
-					margin-top: 10px;
-					@include breakpoint($tablet) {
-						width: 50%;
-					}
-
-					@include breakpoint($phone) {
-						width: 90%;
-						padding-left: 0;
-						margin-top: 3px;
-					}
-				}
-			}
 
 			.menu {
-				@include span(8 last);
+				@include span(12);
 				@include breakpoint($tablet) {
 					@include span(4 last)
 				}
 				
 				ul {
 					list-style: none;
-					float: right;
-					margin-top: 30px;
+					text-align: center;
+					margin-top: 50px;
 					margin-bottom: 0;
 					@include transition(0.5s);
 					
 					li {
 						display: inline-block;
 						padding-bottom: 0;
-						font-weight: 400;
+						font-weight: 300;
 						text-transform: uppercase;
 						margin-right: 20px;
 						
@@ -78,21 +94,23 @@ nav {
 						}
 						
 						a {
-							color: $white;
+							color: $black;
 							text-decoration: none;
 							
 							&:hover {
-								color: $white;
-								font-weight: 700;
+								color: $pink;
+								font-weight: 300;
 							}
 							
 							&:after {
 								display: block;
 								content: "";
-								height: 3px;
+								height: 1px;
 								width: 0;
-								background-color: $white;
-								margin-top: 1.5rem;
+								background-color: $pink;
+								margin-top: -1.7rem;
+								margin-left: auto;
+								margin-right: auto;
 								@include transition(0.5s);
 								@include breakpoint($tablet) {
 									display: none;
@@ -139,6 +157,8 @@ nav {
 		  height: 25px;
 		  position: relative;
 		  margin: 10px auto;
+		  top: 50px;
+		  right: 70px;
 		  -webkit-transform: rotate(0deg);
 		  -moz-transform: rotate(0deg);
 		  -o-transform: rotate(0deg);
@@ -154,7 +174,7 @@ nav {
 		  position: absolute;
 		  height: 5px;
 		  width: 50%;
-		  background: $white;
+		  background: $black;
 		  opacity: 1;
 		  -webkit-transform: rotate(0deg);
 		  -moz-transform: rotate(0deg);
