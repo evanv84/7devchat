@@ -12,43 +12,89 @@
 	text-decoration: none;
 	position: relative;
 	height: 50px;
+	overflow: hidden;
+	vertical-align: middle;
 	@include transition(0.7s);
 	&:before {
 		content: '';
 		position: absolute;
 		width: 50px;
-		height: 50px;
+		height: 49px;
 		top: 0;
 		left: 0;
 		border-right: 1px solid $black;
 		background: url(../img/cart-icon.svg) center center no-repeat;
-		background-position: 100% 50%;
-		@include background-size(60%);
+		background-position: 50% 50%;
+		@include background-size(50%);
 		@include transition(0.7s);
 		@include breakpoint($tablet) {
 			display: none;
 		}
 	}
 	&:hover {
-			background: #d53023;
+			background: $black;
+			color: #FFF;
+			border: 1px solid $white;
+			
 			@include transition(0.5s);
-			background-color: darken($pink, 10);
 			&:before {
-				background-position: 0 50%;
+				background: url(../img/arrow.svg) center center no-repeat;
+				background-position: 130% 50%;
+				@include background-size(160%);
+				border-right: 1px solid #fff;
 			}
 	}
 	@include breakpoint($tablet) {
 			width: 100%;
 			text-align: center;
 			margin-bottom: 1em;
-			padding: 0.5em;
+			padding: 1rem 0.5em;
+			height: auto;
 	}
 	@include breakpoint($phone) {
 				width: 100%;
 				text-align: center;
 				margin-bottom: 1em;
-				padding: 0.5em;
+				padding: 1rem 0.5em;
 				margin-right: auto;
 				margin-left: auto;
+	}
+}
+
+.btn-pink {
+	border: 1px solid $pink;
+	padding: 12px 80px;
+	color: $pink;
+	
+	&:hover {
+		color: #FFF;
+		background: $pink;
+		border: 1px solid $pink;
+	}
+	
+	&:before {
+		display: none;
+	}
+}
+
+.btn-about {
+	&:before {
+		background: url(../img/about-icon.svg) center center no-repeat;
+		background-position: 50% 50%;
+		@include background-size(70%);
+		@include breakpoint($tablet) {
+			display: none;
+		}
+	}
+}
+
+.btn-contact {
+	&:before {
+		background: url(../img/contact-us-icon.svg) center center no-repeat;
+		background-position: 50% 50%;
+		@include background-size(70%);
+		@include breakpoint($tablet) {
+			display: none;
+		}
 	}
 }

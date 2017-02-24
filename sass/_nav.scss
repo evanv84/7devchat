@@ -21,10 +21,14 @@ nav {
 	z-index: 500;
 	top: 0;
 	
+	
 	.brand {
 		position: fixed;
 		z-index: 100;
 		padding: 1rem;
+		@include breakpoint($tablet) {
+			position: absolute;
+		}
 	}
 
 	.account {
@@ -32,6 +36,10 @@ nav {
 		z-index: 101;
 		right: 7%;
 		top: 46px;
+		@include breakpoint($tablet) {
+			right: 50px;
+			position: absolute;
+		}
 	}
 
 	.cart {
@@ -39,6 +47,10 @@ nav {
 		z-index: 101;
 		right: 3%;
 		top: 49px;
+		@include breakpoint($tablet) {
+			right: 10px;
+			position: absolute;
+		}
 	}
 
 	.extra-nav {
@@ -80,6 +92,7 @@ nav {
 					text-align: center;
 					margin-top: 50px;
 					margin-bottom: 0;
+					z-index: 50;
 					@include transition(0.5s);
 					
 					li {
@@ -96,6 +109,9 @@ nav {
 						a {
 							color: $black;
 							text-decoration: none;
+							@include breakpoint($tablet) {
+								color: #FFF;
+							}
 							
 							&:hover {
 								color: $pink;
@@ -264,7 +280,8 @@ nav {
 			top: 48px;
 			right: 0;
 			width: 110%;
-		    background-color: transparentize($pink, 0.05);
+			height: 100vh;
+		    background-color: transparentize($black, 0.05);
 		    padding: 0;
 		    
 		    li {
