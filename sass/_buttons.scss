@@ -1,6 +1,10 @@
 @import "variables";
 @import "mixins";
 
+a {
+	color: $black;
+}
+
 .btn {
 	display: inline-block;
 	padding: 12px 26px 0 76px;

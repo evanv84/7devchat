@@ -51,6 +51,24 @@ nav {
 			right: 10px;
 			position: absolute;
 		}
+
+		a {
+			position: relative;
+			
+			span.cart-counter {
+				position: absolute;
+				top: -20px;
+				right: -10px;
+				background: $pink;
+				color: #FFF;
+				-webkit-border-radius: 50%;
+				        border-radius: 50%;
+				font-size: 0.8rem;
+				text-align: center;
+				width: 20px;
+				height: 20px; 
+			}
+		}
 	}
 
 	.extra-nav {
@@ -165,9 +183,10 @@ nav {
 		color: $gray;
 		cursor: pointer;
 		display: none;
-		position: absolute;
+		position: relative;
 		top: 0;
 		right: 30px;
+		z-index: 49;
 		#nav-icon {
 		  width: 40px;
 		  height: 25px;

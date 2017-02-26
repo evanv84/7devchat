@@ -115,4 +115,12 @@ $(document).ready(function() {
 		.addTo(controller);
 	}
 
+	if ($('#shop-content').length ) {
+
+		var shopAnim = new TimelineMax();
+
+		shopAnim
+			.to("#shop-content", 1, {autoAlpha: 1, y: 0, ease: Power3.easeInOut});
+	}
+
 });
