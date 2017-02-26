@@ -1131,11 +1131,20 @@ footer {
 	
 	input {
 		height: 50px;
+		padding-left: 0.5rem;
+		max-width: 100%;
 	}
 
 	.btn {
 		padding: 12px 50px;
 		cursor: pointer;
+	}
+
+	.wpcf7-select {
+	    height: 50px;
+	    width: 320px;
+	    padding-left: 0.5rem;
+	    max-width: 100%;
 	}
 }
 
