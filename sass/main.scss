@@ -828,7 +828,7 @@ footer {
 
 	ul.products li.product, .woocommerce-page ul.products li.product {
 	    float: left;
-	    margin: 0 2.95% 2.992em 0;
+	    margin: 0 2.95% 2em 0;
 	    padding: 1rem;
 	    position: relative;
 	    width: 22.05%;
@@ -846,6 +846,9 @@ footer {
 
 	    h3 {
 	    	color: $black;
+	    	font-size: 0.9rem;
+	    	height: 50px;
+	    	overflow: hidden;
 	    	&:hover {
 	    		color: $pink;
 	    	}
@@ -859,6 +862,7 @@ footer {
 		    color: $white;
 		    display: block;
 		    font-weight: 300;
+		    margin-top: 0.5rem;
 		    margin-bottom: 0;
 		    font-size: 1.2rem;
 		    padding: 0.5rem;
